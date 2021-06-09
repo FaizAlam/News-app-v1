@@ -1,0 +1,19 @@
+
+<div class="main">
+  <% if(news != null) { %>
+  <% news.forEach(function(newss, index) { %>
+      
+    <div class="card">
+      <a href="/full/<%=newss.title%>"><img src="<%=newss.img%>" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5 class="card-title"><%=newss.title%></h5>
+        <p class="card-text"><%=newss.desc%></p>
+        <p class="card-text"><small class="text-muted">Last updated <%=newss.pubTime%></small></p>
+      </div>
+    </div>
+
+  <% }) %>
+  <% } else { %>
+      No posts found.
+  <% } %>
+</div>

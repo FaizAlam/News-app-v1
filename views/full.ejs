@@ -1,0 +1,146 @@
+<%-include('./partials/navbar.ejs')%>
+<style>
+    body{
+        overflow: hidden;
+        width: 100%;
+    }
+    .time h5{
+        font-size: 0.8em;
+        color: #8a8989;
+    }
+    .head-news h1{
+        font-size: 2em;
+        
+    }
+    
+    .sidebar{
+        flex-grow: 6;
+    }
+    .main-news{
+        flex-grow: 1;
+    }
+    .line{
+        height: 0.1em;
+    width: 75%;
+    background: #dedddd69;
+    margin: 20px 0px;
+    }
+    .container-news section{
+        flex: 0 1 auto;
+    }
+    .img{
+        overflow: hidden;
+    max-width: 727px;
+    max-height: 400px;
+    }
+    .author-box-intro {
+	margin-top: 15px;
+}
+a.author-social-link.small {
+    margin-left: 5px;
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px){
+.center-block {
+	margin: 0 auto;
+}
+.author-box {
+	text-align: center;
+}
+.author-social-links {
+	text-align: center;
+	display: block;
+	margin-top: 10.5px;
+/*  position: absolute;
+    right: 20px;
+    top: -20px;
+*/
+}
+}
+
+footer{
+    background: black;
+    color: aliceblue;
+    width: 100%;
+    bottom: 0;
+    padding: 2em 3em;
+    left: 0;
+    transform: scaleX(1.2);
+}
+
+
+    
+</style>
+<h2>
+
+
+</h2>
+<br>
+<div class="container-news d-flex">
+<section class="main-news col-sm-12">
+    <div class="head-news" style="width: 95%;">
+        <h1><%=news.title%></h1>
+    </div>
+    <div class="time">
+        <h5><%=news.pubTime%></h5>
+    </div>
+    <div class="line"></div>
+    <div class="img">
+        <img src="<%=news.img%>" alt="" style="transform-origin: left top; transform: scale(64%);">
+    </div>
+    <br>
+    <div class="desc">
+       <%=news.desc%>
+    </div>
+
+    <br>
+    
+</section>
+
+<section class="sidebar col-sm-4">
+<h4>Trending News</h4><br>
+<%-include('sidebar')%>
+
+</section>
+
+</div>
+<br>
+<br>
+
+
+<footer>
+    <h5>
+        Faiz @2021 
+    </h5>
+</footer>
+
+ 
+
+<!--
+    <section class="author-box container">
+        <div class="panel panel-default">
+       <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-0">			
+    <img class="img-responsive img-circle center-block" src="https://scontent.ford1-1.fna.fbcdn.net/hprofile-xft1/v/t1.0-1/12348011_10106510835455419_2049185083279161055_n.jpg?oh=fd0d4a585e5393d7d863ea6c4095713b&oe=56DBFEC5">	
+    </div>
+            
+    <div class="col-xs-12 col-sm-9">
+        <hr class="visible-xs-block">	
+        <div class="author-box-intro small text-muted">About the Author</div>
+        <div class="author-inline-block">
+        <h4 class="author-box-title">
+         <span class="author-name text-primary">Taylor Gordon</span><small class="author-social-links small"><a href="#" class="author-social-link twitter small" target="_blank"><i class="fa fa-2x fa-twitter"></i></a><a href="#" class="author-social-link gplus small" target="_blank"><i class="fa fa-2x fa-google-plus"></i></a>	  </small>
+        </h4>	
+        </div>
+        <div class="author-box-content">Taylor K. Gordon is a freelance blogger and personal finance junkie who lives in the nation's capital. She documents her path to financial freedom and adventures in solopreneurship on her blog, Trendy Cheapo.
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+-->
