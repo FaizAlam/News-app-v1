@@ -1,3 +1,3 @@
 module.exports={
-MongoURI : 'PUT YOUR MONGODB URI'
+MongoURI : 'PUT MONGODB URI'
 }

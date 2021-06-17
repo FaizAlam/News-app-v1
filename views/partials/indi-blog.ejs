@@ -2,7 +2,7 @@
 <div class="main">
   <% if(news != null) { %>
   <% news.forEach(function(newss, index) { %>
-      
+    
     <div class="card">
       <a href="/full/<%=newss.title%>"><img src="<%=newss.img%>" class="card-img-top" alt="..."></a>
       <div class="card-body">
@@ -11,9 +11,11 @@
         <p class="card-text"><small class="text-muted">Last updated <%=newss.pubTime%></small></p>
       </div>
     </div>
-
+    
   <% }) %>
   <% } else { %>
       No posts found.
   <% } %>
 </div>
+
+<% -include('./partials/footer') %> 
